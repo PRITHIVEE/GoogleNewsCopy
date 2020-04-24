@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="iconimg.css">
+    <title>Google News</title>
+    <link rel="icon" href="//ssl.gstatic.com/gnews/logo/google_news_192.png" sizes="192x192">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iconimg.css">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Product+Sans&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-
 </head>
 <body>
     <header>
@@ -271,91 +271,29 @@
                                 <span>&#x2039;</span>
                             </div>
                         </li>
-                        <li class="news-tile-container">
-                            <div class="news-tile">
-                                <div class="tile-content">
-                                    <div class="inside-tile">
-                                        <p class="tile-title">Death Toll Due to Covid-19 Touches 414 as Cases Climb to 12,380</p>
-                                        <div class="content-from">News18 <div></div> Yesterday
-                                        <span class="more-options">
-                                            <span class="popup-icon" aria-title="Save for later"><span class="bookmark-icon"></span></span>
-                                            <span class="popup-icon" aria-title="Share"><span class="share-icon"></span></span>
-                                            <span class="popup-icon" aria-title="More"><span class="more-icon"></span></span>
-                                        </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-expand">
-                                <div class="newspaper-icon"><i></i></div>
-                                View full article
-                                <span>&#x2039;</span>
-                            </div>
-                        </li>
-                        <li class="news-tile-container">
-                            <div class="news-tile">
-                                <div class="tile-content">
-                                    <div class="inside-tile">
-                                        <p class="tile-title">Coronavirus roundup: Developments in India and rest of world</p>
-                                        <div class="content-from">Times of India <div></div> 9 hours ago
-                                        <span class="more-options">
-                                            <span class="popup-icon" aria-title="Save for later"><span class="bookmark-icon"></span></span>
-                                            <span class="popup-icon" aria-title="Share"><span class="share-icon"></span></span>
-                                            <span class="popup-icon" aria-title="More"><span class="more-icon"></span></span>
-                                        </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-expand">
-                                <div class="newspaper-icon"><i></i></div>
-                                View full article
-                                <span>&#x2039;</span>
-                            </div>
-                        </li>
-                        <li class="news-tile-container">
-                            <div class="news-tile">
-                                <div class="tile-content">
-                                    <div class="inside-tile">
-                                        <p class="tile-title">WHO Thanks India For Using Polio Surveillance Network In COVID-19 Fight</p>
-                                        <div class="content-from">NDTV News <div></div> Yesterday
-                                        <span class="more-options">
-                                            <span class="popup-icon" aria-title="Save for later"><span class="bookmark-icon"></span></span>
-                                            <span class="popup-icon" aria-title="Share"><span class="share-icon"></span></span>
-                                            <span class="popup-icon" aria-title="More"><span class="more-icon"></span></span>
-                                        </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-expand">
-                                <div class="newspaper-icon"><i></i></div>
-                                View full article
-                                <span>&#x2039;</span>
-                            </div>
-                        </li>
-                        <li class="news-tile-container">
-                            <div class="news-tile">
-                                <div class="tile-content">
-                                    <div class="inside-tile">
-                                        <p class="tile-title">Over 50,000 PPE kits sent by China to India unsafe, unusable: Report</p>
-                                        <div class="content-from">Moneycontrol <div></div> Yesterday
-                                        <span class="more-options">
-                                            <span class="popup-icon" aria-title="Save for later"><span class="bookmark-icon"></span></span>
-                                            <span class="popup-icon" aria-title="Share"><span class="share-icon"></span></span>
-                                            <span class="popup-icon" aria-title="More"><span class="more-icon"></span></span>
-                                        </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-expand">
-                                <div class="newspaper-icon"><i></i></div>
-                                View full article
-                                <span>&#x2039;</span>
-                            </div>
-                        </li>
                     </ul>
+                </div>
+                <div class="news-page">
+                    <div class="header-part">
+                        <h2>User News</h2>
+                    </div>
+                    <ul class="news-container">
+
+                    </ul>
+                    <div class="addition-news-adder">
+                        <button class="news-adder" onclick="showNewsAdder()">Add News</button>
+                        <div class="adder-compartment">
+                            <form action="" class="adder-form" name="news-adder-form" onsubmit="return addNewNews()">
+                                <label for="headlines-data">Headlines:</label>
+                                <input type="text" name="headlines-data" placeholder="News Headlines">
+                                <label for="description-data">Description:</label>
+                                <textarea name="description-data" cols="50" rows="10" placeholder="News Description..."></textarea>
+                                <label for="news-img">Footage:</label>
+                                <input type="file" name="news-img" accept="image/*">
+                                <button type="submit" class="add-news-submitter">Submit</buttom>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="news-page">
                     <div class="header-part">
@@ -701,6 +639,7 @@
             </div>
         </div>
     </div>
+    <script src="js/newsAddition.js"></script>
 </body>
 </html>
 
